@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OnePlus VI</title>
+<meta name="author" content="Kyu Ho Lee" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="src/css/swiper.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+<link rel="stylesheet" href="styles.css">
+<script src="https://unpkg.com/swiper/js/swiper.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="src/js/script.js"></script>
+<link rel="stylesheet" href="https://use.typekit.net/mvf2amz.css">
+
+</head>
+
+<body>
+
+
+
+
+<div class="midSection sections">
+
+  <div class="menuLine">
+    <div id="subScription" class="menu active">Black</div>
+    <div id="inStore" class="menu">White</div>
+    <div id="onLine" class="menu">Teal</div>
+  </div>
+
+  
+  <div id="firstBlock" class="middleBlock">
+    <div class="firstBlockContent leftblock">
+     
+  <div class="logos">
+  <img id="logo" src="images/logo.svg" width="118px"
+         height="118px">
+
+ <img id="logotype" src="images/logotype.svg"  width="383.871 px"
+         height="60.837 px">
+
+</div>
+  <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+        <div class="swiper-slide"><img src="images/op1.png"></div>
+        <div class="swiper-slide"><img src="images/op2.png"></div>
+        <div class="swiper-slide"><img src="images/op3.png"></div>
+        <div class="swiper-slide"><img src="images/op4.png"></div>
+      </div>
+  </div>  
+
+
+      </div>
+  </div>
+
+
+  <div id="secondBlock" class="middleBlock" style="background:rgb(245,5,20);">
+    <div class="secondBlockContent leftblock">
+    
+     <img id="logo" src="images/logowhite.png" width="118px"
+         height="118px">
+
+ <img id="logotype" src="images/logotypewhite.png"  width="383.871 px"
+         height="60.837 px">
+
+
+
+<div class="swiper-container">
+    
+    <div class="swiper-wrapper">
+        
+        <div class="swiper-slide"><img src="images/opwhite1.png"></div>
+        <div class="swiper-slide"><img src="images/opwhite2.png"></div>
+        <div class="swiper-slide"><img src="images/opwhite3.png"></div>
+        <div class="swiper-slide"><img src="images/opwhite4.png"></div>
+   
+    </div>
+</div>
+
+
+    </div>
+  </div>
+
+
+  <div id="thirdBlock" class="middleBlock" style="background:rgb(0,197,230);">
+    <div class="secondBlockContent leftblock">
+  
+          <img id="logo" src="images/logo.png" width="118px" height="118px">
+
+          <img id="logotype" src="images/logotype.png"  width="383.871 px"
+                height="60.837 px">
+
+
+  <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+        <div class="swiper-slide"><img src="images/op1.png"></div>
+        <div class="swiper-slide"><img src="images/op2.png"></div>
+        <div class="swiper-slide"><img src="images/op3.png"></div>
+        <div class="swiper-slide"><img src="images/op4.png"></div>
+      </div>
+   </div>  
+
+
+    </div>
+  </div>
+
+
+  <img id="triangle" src="images/triangle.gif"  width="87.5 px"
+         height="37.5 px">
+<!--
+</div>
+
+<div class="information">
+
+ <div class="bold">
+  <p>Bold loud and <i>passionate</i></p>
+</div>
+
+</div>
+
+<div class="community">
+
+ <div class="black">
+  <p>COMMUNITY</br>AMBITION<br/>PASSION</p>
+</div>-->
+
+</div>
+
+
+<img id="scroll" src="images/scroll.jpg">
+
+
+<script>
+var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    speed: 400,
+    spaceBetween: 100,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+    lazyLoading: true,
+ });
+
+
+var display = function(block_name, title) {
+  // Toogle Block
+  $('.middleBlock').css('display', 'none');
+  $('#' + block_name + '').css('display', 'block');
+
+  // Change Title Color
+  $('.menu').removeClass('active');
+  $(title).addClass('active');
+}
+
+$('#subScription').on('click', function() {
+  display('firstBlock', $(this));
+});
+
+$('#inStore').on('click', function() {
+  display('secondBlock', $(this));
+});
+
+$('#onLine').on('click', function() {
+  display('thirdBlock', $(this));
+});
+  </script>
+</body>
